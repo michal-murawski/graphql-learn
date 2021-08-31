@@ -1,0 +1,68 @@
+{
+	"name": "graphql-learn",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"build:prod": "cross-env NODE_ENV=production && next build",
+		"build:dev": "cross-env NODE_ENV=development && next build",
+		"build-storybook": "build-storybook",
+		"dev": "next dev",
+		"lint": "next lint && npm run lint:tsc",
+		"lint:staged": "lint-staged",
+		"lint:tsc": "tsc --noEmit",
+		"prettier:all": "prettier --write **/*.{ts,tsx,js,json}",
+		"start": "next start -p 8080",
+		"storybook": "start-storybook -p 6006",
+		"prepare": "is-ci || husky install",
+		"postinstall": "is-ci || husky install"
+	},
+	"lint-staged": {
+		"*.{ts,tsx}": [
+			"eslint --cache --fix --max-warnings=0"
+		],
+		"*.{js,ts,tsx,json}": [
+			"prettier --write"
+		]
+	},
+	"dependencies": {
+		"husky": "^7.0.0",
+		"is-ci": "^3.0.0",
+		"lodash": "^4.17.21",
+		"next": "11.1.2",
+		"react": "17.0.2",
+		"react-dom": "17.0.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.14.6",
+		"@storybook/addon-actions": "^6.3.2",
+		"@storybook/addon-essentials": "^6.3.2",
+		"@storybook/addon-links": "^6.3.2",
+		"@storybook/builder-webpack5": "^6.4.0-alpha.9",
+		"@storybook/cli": "^6.3.2",
+		"@storybook/manager-webpack5": "^6.4.0-alpha.9",
+		"@storybook/preset-scss": "^1.0.3",
+		"@storybook/react": "^6.3.2",
+		"@types/lodash": "^4.14.171",
+		"@types/node": "^16.7.9",
+		"@types/react": "17.0.11",
+		"@typescript-eslint/eslint-plugin": "^4.28.1",
+		"@typescript-eslint/parser": "^4.28.1",
+		"babel-loader": "^8.2.2",
+		"cross-env": "^7.0.3",
+		"dotenv-webpack": "^7.0.3",
+		"eslint": "7.29.0",
+		"eslint-config-next": "11.0.1",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-react": "^7.24.0",
+		"fork-ts-checker-webpack-plugin": "^6.2.12",
+		"lint-staged": "^11.0.0",
+		"prettier": "^2.2.1",
+		"type-fest": "^1.2.2",
+		"typescript": "4.4.2",
+		"webpack": "^5.42.1"
+	},
+	"volta": {
+		"node": "16.8.0",
+		"yarn": "1.22.11"
+	}
+}
