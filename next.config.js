@@ -1,14 +1,14 @@
 // @ts-check
 /* eslint-disable @typescript-eslint/no-var-requires */
+const withAntdLess = require('next-plugin-antd-less');
 
 /**
- * @type {import("next/dist/next-server/server/config").NextConfig}
+ * @type {import("next/dist/server/config").NextConfig}
  **/
 const nextConfig = {
 	reactStrictMode: true,
 	webpack: (config, options) => {
 		// Important: return the modified config
-
 		if (options.dev) {
 			const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
@@ -27,4 +27,4 @@ const nextConfig = {
 	},
 };
 
-module.exports = nextConfig;
+module.exports = withAntdLess(nextConfig);

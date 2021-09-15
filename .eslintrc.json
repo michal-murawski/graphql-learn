@@ -25,7 +25,10 @@
 		"indent": ["error", "tab"],
 		"quotes": ["error", "single"],
 		"semi": ["error", "always"],
-		"@typescript-eslint/explicit-module-boundary-types": "off",
-		"linebreak-style": "off"
+		"react/react-in-jsx-scope": 0,
+		"@typescript-eslint/explicit-function-return-type": 0,
+		"@typescript-eslint/explicit-module-boundary-types": 0,
+		"@typescript-eslint/no-var-requires": 0,
+		"linebreak-style": 0
 	}
 }

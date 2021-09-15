@@ -2,8 +2,10 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"components/*": ["components/*"]
+			"components/*": ["src/common/components/*"],
+			"features/*": ["src/features/*"]
 		},
+		"types": ["cypress", "@testing-library/cypress"],
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
 		"allowJs": true,
@@ -20,5 +22,5 @@
 		"jsx": "preserve"
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-	"exclude": ["node_modules"]
+	"exclude": ["node_modules", "cypress"]
 }
