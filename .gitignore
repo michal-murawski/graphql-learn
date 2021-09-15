@@ -47,6 +47,3 @@ tsconfig.tsbuildinfo
 # IDE
 .idea
 .vscode
-
-# graphql
-src/generated
