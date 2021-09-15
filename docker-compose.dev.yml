@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  nextjs-ui-dev:
+    container_name: nextjs-ui-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      target: dev
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    volumes:
+      - .:/app

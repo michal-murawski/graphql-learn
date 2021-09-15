@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  nextjs-ui-test:
+    container_name: nextjs-ui-test
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    stdin_open: true
